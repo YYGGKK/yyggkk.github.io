@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RPV* Solver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <h1>Routing With Probabilistic Vertices</h1>
+      </header>
+
+      <section class="toolbar" aria-label="Solver controls">
+        <label
+          >Vertices <input id="vertex-count" type="range" min="5" max="20" value="8" /><output
+            id="vertex-count-value"
+            >8</output
+          ></label
+        >
+        <label>Seed <input id="seed" type="number" min="0" max="999999" value="2026" /></label>
+        <fieldset class="objective">
+          <legend>Objective</legend>
+          <label><input type="radio" name="objective" value="min-sum" checked /> Min-sum</label>
+          <label><input type="radio" name="objective" value="min-max" /> Min-max</label>
+        </fieldset>
+        <button id="generate" type="button">Generate &amp; solve</button>
+      </section>
+
+      <section class="workspace">
+        <div class="canvas-wrap">
+          <canvas id="map" aria-label="Generated vertices and solution path"></canvas>
+        </div>
+        <aside class="results">
+          <div class="result-heading"><span>Solution</span><strong id="status">Ready</strong></div>
+          <div class="metric">
+            <span>Objective</span><strong id="objective-value">Min-sum</strong>
+          </div>
+          <div class="metric"><span>Cost</span><strong id="cost">--</strong></div>
+          <div class="metric"><span>Expanded states</span><strong id="states">--</strong></div>
+          <div class="metric"><span>Route</span><strong id="route">--</strong></div>
+          <p class="note">
+            The tour starts at S, which is visited with certainty; every other vertex carries
+            the probability that it needs a visit. RPV* runs locally in your browser. No instance data leaves your
+            device.
+          </p>
+          <a class="back" href="../../index.html">Back to homepage</a>
+        </aside>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
