@@ -48,7 +48,8 @@
                     </p>
                     <p style="text-align: center">
                       <a href="mailto:yrui3838@gmail.com">Email</a> &nbsp;/&nbsp;
-                      <a href="mailto:longrui001@e.ntu.edu.sg">NTU Email</a>
+                      <a href="mailto:longrui001@e.ntu.edu.sg">NTU Email</a> &nbsp;/&nbsp;
+                      <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=-m7qQS0AAAAJ">Google Scholar</a>
                     </p>
                   </td>
                   <td style="padding: 1.5%; width: 39%; max-width: 39%">
@@ -62,7 +63,7 @@
                 </tr>
               </tbody>
             </table>
-            
+            <h2>Publications</h2>
 
             <table
               style="
@@ -93,7 +94,7 @@
                     <br />
                     <strong>Longrui Yang</strong><sup>&dagger;</sup>,
                     <a href="https://ian-wyy.github.io/">Yiyu Wang</a><sup>&dagger;</sup>,
-                    <a>Jingfan Tang</a><sup>&dagger;</sup>, <a>Yunpeng Lyu</a>,
+                    <a href="https://tangjingfan.github.io">Jingfan Tang</a><sup>&dagger;</sup>, <a>Yunpeng Lyu</a>,
                     <a href="https://eggeek.github.io/">Shizhe Zhao</a>,
                     <a href="https://caochao.me">Chao Cao</a>,
                     <a href="https://rap-lab.github.io/team/zren">Zhongqiang Ren</a>
@@ -102,7 +103,7 @@
                     <br />
                     MRS Poster Paper, 2025
                     <br />
-                    <em>In submission to TRO</em>, 2026
+                    <em>Submitted to TRO (Conditional Acceptance)</em>, 2026
                     <br />
                     <a href="https://arxiv.org/abs/2510.04161">paper</a> /
                     <a href="demo/heha/">demo</a>
@@ -122,17 +123,48 @@
               <button onclick="showTab('experience')">Experience</button>
             </p>
             <div id="projects">
-              <h3>Selected Research Projects</h3>
-              <div class="project-video">
+              <h3>Research Project</h3>
+              <div class="project-cards">
+              <div class="project-card">
+                <h4>Occ Planner</h4>
+                <p>Our methodology comprises L3ROcc and OccPlanner. L3ROcc derives scalable local geometric supervision from monocular navigation videos. Using this supervision, OccPlanner learns planning-oriented local geometry from RGB-D observations. Meanwhile, it grounds the PixelGoal in an egocentric metric representation. The resulting goal and occupancy representations jointly condition a diffusion trajectory policy.</p>
+                <video controls muted loop playsinline preload="metadata">
+                  <source src="images/occ_planner.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="project-card">
                 <h4>Differentiable Visual Navigation</h4>
+                <p>End-to-end navigation from RGB-D observations using differentiable neural networks.</p>
+                <div class="project-video-pair">
                 <video width="100%" controls muted loop playsinline preload="metadata">
                   <source src="images/differentiable_visual_navigation.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                <video class="compact-video" controls muted loop playsinline preload="metadata">
+                  <source src="images/differentiable_visual_navigation_vd3.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                </div>
               </div>
-              <p><strong>HEHA:</strong> A hierarchical planning framework that coordinates heterogeneous robots to explore unknown environments efficiently and safely.</p>
-              <p><strong>Autonomous Exploration:</strong> Connecting local perception with global reasoning to help robots decide where to move, what to observe, and how to discover the unknown.</p>
-              <p><strong>Robot Navigation and Mapping:</strong> Developing reliable navigation systems through vision-language reasoning, SLAM, and multi-robot map alignment.</p>
+              <div class="project-card">
+              <h4>Magnetic-Field-Based Multi-Robot Exploration and Mapping</h4>
+              <p>Developed a cooperative exploration system that uses magnetic sensing for robust localization in corridor environments and CMA-ES-based pose optimization to align magnetic and LiDAR maps across multiple robots.</p>
+              <div class="project-gallery">
+                <img src="images/pic1.jpg" alt="Robot Navigation and Mapping project" style="display: block; width: 80%; height: 144px; margin: 0 auto; object-fit: contain; transform: scale(1.25);" loading="lazy" />
+                <img src="images/magnetic_exploration.png" alt="Exploration path and LiDAR mapping in a corridor environment" style="display: block; width: 80%; height: 144px; margin: 0 auto; object-fit: contain; transform: scale(1.25);" loading="lazy" />
+                <img src="images/pic3.png" alt="Robot Navigation and Mapping project demonstration" style="display: block; width: 100%; height: 180px; object-fit: contain; transform: scale(1.25);" loading="lazy" />
+              </div>
+              </div>
+              <div class="project-card">
+                <h4>Dead-End Avoidance via Topological Prediction</h4>
+                <p>TPNet combines point clouds and images to predict lightweight topological graphs of dead-ends. Integrating these predictions with an enhanced collision-checking module enables trajectory-library-based local planners to avoid dead-ends under incomplete observations, validated in simulation and real-world UAV experiments.</p>
+                <video width="67%" style="display: block; margin: 0 auto;" controls muted loop playsinline preload="metadata">
+                  <source src="images/topological_prediction.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              </div>
             </div>
             <div id="experience" style="display: none">
             <h3>FAST LAB, Huzhou Institute of Zhejiang University <small>(Dec 2023 – Jul 2024)</small></h3>
